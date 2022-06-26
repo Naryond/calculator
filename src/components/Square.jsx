@@ -3,8 +3,8 @@ import '../App.css';
 import PropTypes from 'prop-types';
 
 const Square = (props) => {
-  const handleClick = (e) => {
-    props.value(e.target.value);
+  const handleClick = (i) => {
+    props.value(i);
   };
 
   return <button className="button" onClick={handleClick}></button>;

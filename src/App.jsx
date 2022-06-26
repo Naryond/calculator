@@ -1,19 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import Square from './components/Square';
 
 function App() {
   document.title = 'Calculator';
 
-  // const panel = Array(19).fill(null);
+  const panel = Array(19).fill(null);
   const [button, setButton] = useState(panel);
 
-  const handleButtons = () => {
-    setButton({ ...state, value });
+  const handleButtons = (i) => {
+    setButton({ ...button, i });
   };
 
-  const renderSquare = () => {
-    return <Square value={handleButtons} />;
+  const renderSquare = (i) => {
+    return <Square value={handleButtons[i]} />;
   };
 
   return (
